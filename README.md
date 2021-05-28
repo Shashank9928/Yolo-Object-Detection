@@ -47,7 +47,6 @@
 	*  Loaded all the images from the image folder and passes in the detect_objects function then store each image information in the objects-data folder
 		* objects-data: contains the text files having the information of every object in a particular image.
 	```python
-
 	import os
 	
 	for i in os.listdir("images"):
@@ -55,5 +54,3 @@
 		f = open("objects-data/"+os.path.splitext(i)[0]+".txt", "a")
 		f.write(str(detect_objects("images/"+i)))
 		f.close()
-
-```
