@@ -1,0 +1,1 @@
+{'car': 3, 'backpack': 2, 'person': 4, 'suitcase': 1}

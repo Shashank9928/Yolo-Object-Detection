@@ -1,0 +1,1 @@
+{'couch': 1, 'potted plant': 3, 'bottle': 2}

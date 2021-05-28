@@ -1,0 +1,1 @@
+{'person': 1, 'bowl': 4, 'dining table': 1, 'sandwich': 1, 'cup': 1}

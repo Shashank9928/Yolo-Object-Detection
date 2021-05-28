@@ -1,0 +1,1 @@
+{'apple': 1, 'bowl': 1, 'dining table': 1}
