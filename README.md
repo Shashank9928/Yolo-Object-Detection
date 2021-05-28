@@ -17,6 +17,10 @@
         [Model and weight yolo](https://drive.google.com/drive/folders/1twsK4s3DfXzD0O1n1UwrnUvHuzpy9Rce?usp=sharing)
 
 
+### Project Working Structure:-
+    *  **images**
+
+
 ### To make files containg the data of every image:-
 
 
