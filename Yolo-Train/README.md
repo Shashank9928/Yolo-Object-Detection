@@ -4,7 +4,7 @@
 - Making the custom trained model using the YOLO algorithm.
 
   
-> ## Instructions:-
+> ## Instructions :bulb: :-
 
 - Use google colab to perform tasks.
 
@@ -14,7 +14,7 @@
 
   
 
-> ## Task: -
+> ## Task: :mechanical_arm: -
 
 - Use algorithm present in function **make_yolov3_model()** to make model.
 
