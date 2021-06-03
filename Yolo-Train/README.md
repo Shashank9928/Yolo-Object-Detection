@@ -29,3 +29,7 @@
 >     > - [689] filters=27
 >    > - [783] classes=4 
 >    > - [776] filters=27 
+>    >
+>![Custom Config](https://github.com/Shashank9928/Yolo-Object-Detection/blob/work/readme-resources/cfg_1.png)
+>
+>![Custom Config](../readme-resources/cfg_1.png)
