@@ -63,7 +63,7 @@
 >	>	├── backup              		  ( empty initilized folder)
 >	>	└── README.md
 >
-> >#### 2.  Make the YOLO file using the make command **Make sure you are into darknet folder**:-
+> >#### 2.  Make the YOLO file using make command **Make sure you are into darknet folder**:-
 > >
 >  >`%cd darknet/`
 >  >`!make` 
@@ -79,12 +79,12 @@
 >  > #### 4. Start Training :-
 >  > Get to main working directery using `%cd ..` 
 >  >
->  > Use the below command to start training.
+>  > Use below command to start training.
 >  >
 >  >`!darknet/darknet detector train Data/labelled_data.data darknet/cfg/yolov3_custom.cfg Custom_weights/darknet53.conv.74 -dont_show`
 >  >
->  > It will start the training of your custom model and takes 2-3 hours or more depending upon data size.
->   > After training in the backup folder you will get trained weights to use them to detect and testing purpose.
+>  > It will start training of your custom  model and takes 2-3 hours or more depending upon data size.
+>   > After training in backup folder you will get trained weights use them to detect and testing purpose.
 >   >
 
 > ## Runnning  Custom Object Detector!!!
@@ -99,6 +99,11 @@
 > > ![test config](../readme-resources/test_cfg.png)
 > 
 > > 3. Put custom trained [weights](https://drive.google.com/drive/folders/1hnuhcLrEsZ6VQR7bt39FR8zB15LUZp3A?usp=sharing) yolo folder as well .
+> ![folder detect struct](.../readme-resources//detect_folder_strtcture.png)
+> 
 >
-> ![folder detect struct](../readme-resources/detect_folder_strtcture.png)
+> >### Working with Yolo on Video!!!!
+> > [YOLO-Custom-On-Video.ipynb](YOLO-Custom-On-Video.ipynb)
+> > * Contains the custom model working in video rather than image.
+> > * Works frame by frame, a little bit slow.
 > 
