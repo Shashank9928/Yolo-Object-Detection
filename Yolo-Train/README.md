@@ -53,12 +53,52 @@
 
 
 
-## Steps: 
-	
+>## Steps for training: 
+>	
+>
+>  >#### 1. Folder Structure:- 
+>	>	├── darknet        
+>	>	├── Data             
+>	>	├── coustom_weights       (Conntaining  pretrained weights) 
+>	>	├── backup              		  ( empty initilized folder)
+>	>	└── README.md
+>
+> >#### 2.  Make the YOLO file using the make command **Make sure you are into darknet folder**:-
+> >
+>  >`%cd darknet/`
+>  >`!make` 
+>  >
+>  > **"!make"** will create a ready to go configured algorithm according to the system requirement available and able to create the model.
+>  >
+>  
+>  >#### 3. Unblock/premission to darknet command:-
+>  > `!chmod +x ./darknet`
+>  >
+>  > It will activate permission to darknet built.
+>  
+>  > #### 4. Start Training :-
+>  > Get to main working directery using `%cd ..` 
+>  >
+>  > Use the below command to start training.
+>  >
+>  >`!darknet/darknet detector train Data/labelled_data.data darknet/cfg/yolov3_custom.cfg Custom_weights/darknet53.conv.74 -dont_show`
+>  >
+>  > It will start the training of your custom model and takes 2-3 hours or more depending upon data size.
+>   > After training in the backup folder you will get trained weights to use them to detect and testing purpose.
+>   >
 
- 1. Folder Structure:- 
-		├── darknet        
-		├── data             
-		├── coustom_weights       (Conntaining  pretrained weights) 
-		├── backup              		  ( empty initilized folder)
-		└── README.md
+> ## Runnning  Custom Object Detector!!!
+> [obj-detection-opencv.ipynb](obj-detection-opencv.ipynb)
+> 
+> > 1. Put the custom classes into yolo.txt.
+> >
+> > ![classes](../readme-resources/utl_txt.png)
+> 
+>  >2. yolov3_custom.cfg change it to training to testing
+> > 	Open **"yolov3_custom.cfg"** comment trainig and switch to testing.
+> > ![test config](../readme-resources/test_cfg.png)
+> 
+> > 3. Put custom trained [weights](https://drive.google.com/drive/folders/1hnuhcLrEsZ6VQR7bt39FR8zB15LUZp3A?usp=sharing) yolo folder as well .
+>
+> ![folder detect struct](.../readme-resources/detect_folder_strtcture.png)
+> 
