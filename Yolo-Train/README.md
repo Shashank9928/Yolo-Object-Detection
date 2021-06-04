@@ -100,5 +100,5 @@
 > 
 > > 3. Put custom trained [weights](https://drive.google.com/drive/folders/1hnuhcLrEsZ6VQR7bt39FR8zB15LUZp3A?usp=sharing) yolo folder as well .
 >
-> ![folder detect struct](.../readme-resources/detect_folder_strtcture.png)
+> ![folder detect struct](../readme-resources/detect_folder_strtcture.png)
 > 
