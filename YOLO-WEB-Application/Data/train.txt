@@ -1,0 +1,3 @@
+/mnt/e/BISAG/ST-YOLO/Data/amomama_usa-20210529-0001.jpg
+/mnt/e/BISAG/ST-YOLO/Data/barackobama-20210529-0001.jpg
+/mnt/e/BISAG/ST-YOLO/Data/barackobama-20210529-0002.jpg
