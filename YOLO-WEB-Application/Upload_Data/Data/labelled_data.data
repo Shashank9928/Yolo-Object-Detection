@@ -1,0 +1,5 @@
+classes = 4
+train = /mnt/e/BISAG/ST-YOLO/Upload_Data/Data/train.txt
+valid = /mnt/e/BISAG/ST-YOLO/Upload_Data/Data/test.txt
+names = /mnt/e/BISAG/ST-YOLO/Upload_Data/Data/classes.names
+backup = backup
