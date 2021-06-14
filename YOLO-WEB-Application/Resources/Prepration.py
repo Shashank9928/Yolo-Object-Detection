@@ -2,6 +2,14 @@ import streamlit as st
 import subprocess
 import cv2 as cv
 import numpy as np
+
+def file_len(fname):
+    with open(fname) as f:
+        for i, l in enumerate(f):
+            pass
+    return i + 1
+
+
 def run_make_cpu():
     """Run command, transfer stdout/stderr back into Streamlit and manage error"""
     st.info("Running Getting the yolo ready ")
@@ -35,7 +43,8 @@ def run_command(cmd):
         st.error(result.stderr)
         raise e
 
-def begain_trainig(data_path="Data",classes=4):
+def begain_trainig(data_path="Data"):
+    classes = file_len(data_path.join("/classes.txt"))
     max_batches = (classes*2000)
     filters = ((classes+5)*3)
     st.info("TRAINING UNDER PROCESS MAY TAKE TIME")
