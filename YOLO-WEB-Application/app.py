@@ -64,10 +64,13 @@ with st.beta_expander('Upload and prepare for training', expanded=True):
 
 st.info("Select Data to start training")
 with st.beta_expander('Training-Model', expanded=False):        
-    filename = file_selector(uni="train")
-    st.write('You selected `%s`' % filename)
+    fname = file_selector(uni="train")
+    st.write('You selected `%s`' % fname)
+
+    no_of_classes = st.number_input("Enter the no of classe: ",min_value=1,max_value=50)
+
     if(st.button("Start Training")):
-        begain_trainig(filename)
+        begain_trainig(b_dir=BASE_DIR,data_path=fname,classes=no_of_classes)
         st.success("TRAINING IS COMPLETED")
 
 

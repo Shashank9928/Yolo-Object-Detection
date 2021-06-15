@@ -3,11 +3,6 @@ import subprocess
 import cv2 as cv
 import numpy as np
 
-def file_len(fname):
-    with open(fname) as f:
-        for i, l in enumerate(f):
-            pass
-    return i + 1
 
 
 def run_make_cpu():
@@ -43,12 +38,28 @@ def run_command(cmd):
         st.error(result.stderr)
         raise e
 
-def begain_trainig(data_path="Data"):
-    classes = file_len(data_path.join("/classes.txt"))
+def begain_trainig(b_dir,data_path="Data",classes=1):
     max_batches = (classes*2000)
     filters = ((classes+5)*3)
+    # st.warning(b_dir)
+    # run_command("ls")
+    # try:
+    # run_command("ls")
+    subprocess.run(f"cp {b_dir}/darknet/cfg/yolov3_training.cfg {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+    
+    subprocess.run(f"sed -i '20s/max_batches=500200/max_batches = {max_batches}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+
+    subprocess.run(f"sed -i '603s/filters=255/filters = {filters}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+    subprocess.run(f"sed -i '610s/classes=80/classes = {classes}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+
+    subprocess.run(f"sed -i '689s/filters=255/filters = {filters}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+    subprocess.run(f"sed -i '696s/classes=80/classes = {classes}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+
+    subprocess.run(f"sed -i '776s/filters=255/filters = {filters}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
+    subprocess.run(f"sed -i '783s/classes=80/classes = {classes}/' {b_dir}/darknet/cfg/yolov3_custom_train.cfg",shell=True)
     st.info("TRAINING UNDER PROCESS MAY TAKE TIME")
-    run_command(cmd=f"darknet/darknet detector train {data_path}/labelled_data.data darknet/cfg/yolov3_custom_train.cfg Custom_weights/darknet53.conv.74 -dont_show")
+
+    run_command(cmd=f"{b_dir}/darknet/darknet detector train {data_path}/labelled_data.data {b_dir}/darknet/cfg/yolov3_custom_train.cfg {b_dir}/Custom_weights/darknet53.conv.74 -dont_show")
 
 
 
